@@ -1,97 +1,161 @@
 <?php
+
 /**
  * Class SolrClient
  */
-class SolrClient
+final class SolrClient
 {
+    /**
+     * @var integer
+     */
     const SEARCH_SERVLET_TYPE = 1;
+
+    /**
+     * @var integer
+     */
     const UPDATE_SERVLET_TYPE = 2;
+
+    /**
+     * @var integer
+     */
     const THREADS_SERVLET_TYPE = 4;
+
+    /**
+     * @var integer
+     */
     const PING_SERVLET_TYPE = 8;
+
+    /**
+     * @var integer
+     */
     const TERMS_SERVLET_TYPE = 16;
+
+    /**
+     * @var integer
+     */
     const SYSTEM_SERVLET_TYPE = 32;
-    const DEFAULT_SEARCH_SERVLET = select;
-    const DEFAULT_UPDATE_SERVLET = update;
-    const DEFAULT_THREADS_SERVLET = admin / threads;
-    const DEFAULT_PING_SERVLET = admin / ping;
-    const DEFAULT_TERMS_SERVLET = terms;
-    const DEFAULT_SYSTEM_SERVLET = system;
 
-    public function __construct(array $clientOptions)
+    /**
+     * @var string
+     */
+    const DEFAULT_SEARCH_SERVLET = 'select';
+
+    /**
+     * @var string
+     */
+    const DEFAULT_UPDATE_SERVLET = 'update';
+
+    /**
+     * @var string
+     */
+    const DEFAULT_THREADS_SERVLET = 'admin/threads';
+
+    /**
+     * @var string
+     */
+    const DEFAULT_PING_SERVLET = 'admin/ping';
+
+    /**
+     * @var string
+     */
+    const DEFAULT_TERMS_SERVLET = 'terms';
+
+    /**
+     * @var string
+     */
+    const DEFAULT_SYSTEM_SERVLET = 'admin/system';
+
+    /**
+     * @var SolrInputDocument $doc
+     * @var bool $overwrite
+     * @var int $commitWithin
+     * @return SolrUpdateResponse
+     */
+    public function addDocument($doc, $overwrite = true, $commitWithin = 0)
     {
-
     }
 
+    /**
+     * @var array $docs
+     * @var bool $overwrite
+     * @var int $commitWithin
+     * @return void
+     */
+    public function addDocuments($docs, $overwrite = true, $commitWithin = 0)
+    {
+    }
+
+    /**
+     * @var bool $softCommit
+     * @var bool $waitSearcher
+     * @var bool $expungeDeletes
+     * @return SolrUpdateResponse
+     */
+    public function commit($softCommit = false, $waitSearcher = true, $expungeDeletes = false)
+    {
+    }
+
+    /**
+     * @var array $clientOptions
+     * @return void
+     */
+    public function __construct($clientOptions)
+    {
+    }
+
+    /**
+     * @var string $id
+     * @return SolrUpdateResponse
+     */
+    public function deleteById($id)
+    {
+    }
+
+    /**
+     * @var array $ids
+     * @return SolrUpdateResponse
+     */
+    public function deleteByIds($ids)
+    {
+    }
+
+    /**
+     * @var array $queries
+     * @return SolrUpdateResponse
+     */
+    public function deleteByQueries($queries)
+    {
+    }
+
+    /**
+     * @var string $query
+     * @return SolrUpdateResponse
+     */
+    public function deleteByQuery($query)
+    {
+    }
+
+    /**
+     * @return void
+     */
     public function __destruct()
     {
-
     }
 
     /**
-     * @param SolrInputDocument $doc
-     * @param bool $overwrite
-     * @param int $commitWithin
-     * @return SolrUpdateResponse
+     * @var string $id
+     * @return SolrQueryResponse
      */
-    public function addDocument(SolrInputDocument $doc, bool $overwrite = true, int $commitWithin = 0)
-    {
-
-    }
-
-    /**
-     * @param array $docs
-     * @param bool $overwrite
-     * @param int $commitWithin
-     */
-    public function addDocuments(array $docs, bool $overwrite = true, int $commitWithin = 0)
+    public function getById($id)
     {
     }
 
     /**
-     * @param bool $softCommit
-     * @param bool $waitSearcher
-     * @param bool $expungeDeletes
-     * @return SolrUpdateResponse
+     * @var array $ids
+     * @return SolrQueryResponse
      */
-    public function commit(bool $softCommit = false, bool $waitSearcher = true, bool $expungeDeletes = false)
+    public function getByIds($ids)
     {
-
-    }
-
-    /**
-     * @param string $id
-     * @return SolrUpdateResponse
-     */
-    public function deleteById(string $id)
-    {
-
-    }
-
-    /**
-     * @param array $ids
-     * @return SolrUpdateResponse
-     */
-    public function deleteByIds(array $ids)
-    {
-
-    }
-
-    /**
-     * @param array $queries
-     * @return SolrUpdateResponse
-     */
-    public function deleteByQueries(array $queries)
-    {
-
-    }
-
-    /**
-     * @param string $query
-     * @return SolrUpdateResponse
-     */
-    public function deleteByQuery(string $query)
-    {
-
     }
 
     /**
@@ -99,7 +163,6 @@ class SolrClient
      */
     public function getDebug()
     {
-
     }
 
     /**
@@ -107,18 +170,16 @@ class SolrClient
      */
     public function getOptions()
     {
-
     }
 
     /**
+     * @var int $maxSegments
+     * @var bool $softCommit
+     * @var bool $waitSearcher
      * @return SolrUpdateResponse
-     * @param int $maxSegments
-     * @param bool $softCommit
-     * @param bool $waitSearcher
      */
-    public function optimize(int $maxSegments = 1, bool $softCommit = true, bool $waitSearcher = true)
+    public function optimize($maxSegments = 1, $softCommit = true, $waitSearcher = true)
     {
-
     }
 
     /**
@@ -126,25 +187,22 @@ class SolrClient
      */
     public function ping()
     {
-
     }
 
     /**
-     * @param SolrParams $query
+     * @var SolrParams $query
      * @return SolrQueryResponse
      */
-    public function query(SolrParams $query)
+    public function query($query)
     {
-
     }
 
     /**
-     * @param string $raw_request
+     * @var string $raw_request
      * @return SolrUpdateResponse
      */
-    public function request(string $raw_request)
+    public function request($raw_request)
     {
-
     }
 
     /**
@@ -152,49 +210,37 @@ class SolrClient
      */
     public function rollback()
     {
-
-    }
-
-
-    public function setResponseWriter(string $responseWriter)
-    {
-
     }
 
     /**
-     * Changes the specified servlet type to a new value
-     *
-     * @param int $type
-     * @param string $value
+     * @var string $responseWriter
+     * @return void
+     */
+    public function setResponseWriter($responseWriter)
+    {
+    }
+
+    /**
+     * @var int $type
+     * @var string $value
      * @return bool
      */
-    public function setServlet(int $type, string $value)
+    public function setServlet($type, $value)
     {
-
     }
 
     /**
-     * Retrieve Solr Server information
-     *
-     * @throws SolrClientException
-     * @throws SolrServerException
-     * @return SolrGenericResponse
+     * @return void
      */
     public function system()
     {
-
     }
 
     /**
-     * Checks the threads status
-     *
-     * @throws SolrClientException
-     * @throws SolrServerException
-     * @return SolrGenericResponse
+     * @return void
      */
     public function threads()
     {
-
     }
 
 }
