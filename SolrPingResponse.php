@@ -1,12 +1,38 @@
 <?php
 
 /**
- * Created by PhpStorm.
- * User: xwsoul
- * Date: 2017/1/1
- * Time: 上午11:35
+ * Class SolrPingResponse
  */
-class SolrPingResponse extends SolrResponse
+final class SolrPingResponse extends SolrResponse
 {
+    /**
+     * @var integer
+     */
+    const PARSE_SOLR_OBJ = 0;
+    /**
+     * @var integer
+     */
+    const PARSE_SOLR_DOC = 1;
+
+    /**
+     * @return void
+     */
+    public function __construct()
+    {
+    }
+
+    /**
+     * @return void
+     */
+    public function __destruct()
+    {
+    }
+
+    /**
+     * @return string
+     */
+    public function getResponse()
+    {
+    }
 
 }

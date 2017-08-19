@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * Class SolrModifiableParams
+ */
 class SolrModifiableParams extends SolrParams implements Serializable {
     /* Methods */
     public function __construct () {

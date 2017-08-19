@@ -1,9 +1,12 @@
 <?php
-
 /**
- * Class SolrQueryResponse
+ * Created by PhpStorm.
+ * User: xwsoul
+ * Date: 2017/8/19
+ * Time: 上午9:34
  */
-final class SolrQueryResponse extends SolrResponse
+
+final class SolrGenericResponse extends SolrResponse
 {
 
     /**
