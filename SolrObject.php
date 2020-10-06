@@ -2,6 +2,7 @@
 
 /**
  * Class SolrObject
+ * @property response
  */
 final class SolrObject implements ArrayAccess
 {

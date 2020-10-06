@@ -10,6 +10,17 @@ class SolrQuery extends SolrModifiableParams implements Serializable
     const  TERMS_SORT_INDEX = 0;
     const  TERMS_SORT_COUNT = 1;
     /* Methods */
+
+    /**
+     * @param string $name
+     * @param string $value
+     * @return self
+     */
+    public function addParam($name, $value)
+    {
+
+    }
+
     /**
      * @param string $fq
      * @return SolrQuery
